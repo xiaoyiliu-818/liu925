@@ -1,0 +1,324 @@
+    *{margin:0;padding:0}
+    .header1{
+        width:100%;
+        height:50px;
+    }
+    .header{
+        width:100%;
+        height:50px;
+    }
+    .footer{
+        width:100%;
+        height:460px;
+    }
+    /*轮播图*/
+    .banner{
+        width:100%;
+    }
+    .banner1_none{
+        display: none;
+    }
+    .banner1_block{
+        display: block;
+    }
+    .banner1_i{
+        width:100%;
+        height:auto;  
+    }
+    .banner1_p{
+        width:100%;
+        height:50px;
+        text-align:center;
+        font-size:18px;
+        margin-top:-4px;
+    }
+    .banner1_s{
+        line-height: 50px;
+        color: #fff;
+        list-style:none;
+        margin-top:20px;
+    }
+    /*1楼新闻*/
+    .news{
+        width:1200px;
+        height:277px;
+        margin:30px auto 0px;
+    }
+    .news_title,.shows_title,.records_title,.shops_title,.arts_title{
+        height:34px;
+        padding:0px 10px;
+        border-bottom:1px solid #aaa;
+        justify-content: space-between;
+        display: flex;
+    }
+    .news_title img{
+        width:192px;
+        height:24px;
+    }
+    .news_content{
+        width:1180px;
+        height:205px;
+        padding:20px 10px;
+        justify-content: space-around;
+        display: flex;
+    }
+    .left{
+        width:400px;
+        height:200px;
+    }
+    .center{
+        width:440px;
+        height:202px;
+        list-style:none;
+    }
+    .center_u{
+        list-style:none;
+    }
+    .center_u li{
+        width:440px;
+        height:19px;
+        margin-bottom:18px;
+    }
+    .center_u li>span{
+        margin-right:15px;
+    }
+    .center_u li>a{
+        text-decoration: none;
+        overflow:hidden;
+        font-size:14px;
+        color:#aaa;
+    }
+    .center_u li>a:hover{
+        color:#000;
+    }
+    /*2楼演出*/
+    .shows{
+        width:1200px;
+        height:674px;
+        margin:40px auto 0px;
+    }
+    .shows_title img{
+        width:464px;
+        height:24px;
+    }
+    .shows_content{
+        height:674px;
+    }
+    .shows_ul,.records_ul,.shops_ul{
+        width:1200px;
+        position: absolute;
+        justify-content:space-between;
+        display: flex;
+        overflow: hidden;
+        flex-wrap:wrap;
+    }
+    .show1{
+        width:180px;
+        height:324px;
+        padding-top:2px;
+        margin:0px 10px;
+        list-style:none;
+        display:flex;
+        justify-content:space-around;
+        position:relative;
+        overflow:hidden;
+    }
+    .show1_all{
+        width:180px;
+        height:320px;
+    }
+    .show1_all1{
+        width:180px;
+        height:270px;
+        padding-top:20px;
+        overflow: hidden;
+    }
+    .show1_all1 img{
+        width:180px;
+        height:270px;
+    }
+    .show1_all2{
+        width:180px;
+        height:102px;
+        position: absolute;
+        top:326px;
+        background:rgba(0,0,0,.9);
+        transition:all .5s linear;
+        padding-left:10px;  
+        font-size:14px;
+        color:#aaa; 
+    }
+    .show1_all:hover .show1_all2{
+        top:190px;
+    }
+    .shows_p1{
+        margin-top:20px;
+    }
+    .shows_p3{
+        font-size:14px;
+        color:#9fd9f6;
+        margin-top:20px;
+    }
+    .show1_all3{
+        width:180px;
+        height:30px;
+        font-size:12px;
+        color:#aaa;
+        text-align: center;
+        padding-top:5px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .show1_all3:hover{
+        color:#000;
+    }
+/*3楼商店、4楼唱片*/
+    .records,.shops{
+        width:100%;
+        height:344px;
+    }
+    .records_all,.shops_all{
+        width:1200px;
+        height:344px;
+        margin:60px auto 0px;
+        position: relative;
+    }
+    .prev,.next{
+        width:30px;
+        height:30px;
+        position: absolute;
+        top:151px;
+        display:block;
+    }
+    .prev:hover{
+        background:url(../img/arrow_022.png);
+    }
+    .next:hover{
+        background:url(../img/about_22.png);
+    }
+    .prev{
+        left:-50px;
+        background:url(../img/arrow_021.png);
+    }
+    .next{
+        left:1220px;
+        background:url(../img/arrow_02.png);
+    }
+    .records_title img{
+        width:144px;
+        height:24px;
+    }
+    .shops_title img{
+        width:224px;
+        height:24px;
+    }
+    .records_more a,.shops_more a,.arts_more a,.news_more a{
+        text-decoration:none;
+        margin-top:3px;
+        color:#a0a0a0;
+        font:18px  lighterTahoma, "Microsoft Yahei", 微软雅黑, Arial, Helvetica, STHeiti;
+    }
+    .records_more a:hover,.shops_more a:hover,.news_more a:hover,.arts1_p>span:hover{
+        color:#9fd9f6;
+    }
+    .records_content,.shops_content{
+        width:1200px;
+        height:310px;
+    }
+    .records1,.shops1{
+        width:220px;
+        height:314px;
+        padding-top:2px;
+        margin:0px 10px;
+        list-style:none;
+        display:flex;
+        justify-content:space-around;
+        position:relative;
+        overflow:hidden;
+        border-top:2px solid #fff;
+    }
+    .records1:hover,.shops1:hover{
+        border-top:2px solid #9fd9f6;
+    }
+    .records1_all,.shops1_all{
+        width:220px;
+        height:310px;
+    }
+    .records1_all2,.shops1_all2{
+        width:220px;
+        height:310px;
+        padding-top:20px;
+    }
+    .records1_all2 img,.shops1_all2 img{
+        width:218px;
+        height:220px;
+        border:1px solid #fff;
+    }
+    .records1_all2 img:hover,.shops1_all2 img:hover{
+        border:1px solid #9fd9f6;
+    }
+    .records1_up,.shops1_up{
+        width:220px;
+        height:72px;
+        padding:4px 0px 10px 4px;
+    }
+    .records1_p1,.shops1_p1{
+        font-size:12px;
+        padding-left:2px;
+    }
+    .records1_s1,.shops1_s1{
+        font:bold 14px Tahoma,'微软雅黑',STHeiti;
+        color:#9fd9f6;
+        padding-left:2px;
+    }
+    .records1_s2 button,.shops1_s2 button{
+        width:80px;
+        height:32px;
+        background:#9fd9f6;
+        color:#fff;
+        font:bold 14px Tahoma,'微软雅黑',STHeiti;
+        position:absolute;
+        display:block;
+        right:0px;
+        top:270px;
+        border-radius:3px;
+        border:none;
+    }
+    .arts{
+        width:1200px;
+        height:515px;
+        margin:50px auto 60px;
+    }
+    .arts_title img{
+        width:128px;
+        height:24px;
+    }
+    .arts_content{
+        width:1200px;
+        height:471px;
+        display:flex;
+        justify-content:space-between;
+        position: absolute;
+        flex-wrap: wrap;
+    }
+    .arts1{
+        width:280px;
+        height:230px;
+        margin:10px;
+        position: relative;
+    }
+    .arts1 img{
+        width:280px;
+        height:210px;
+    }
+    .arts1_p{
+        font-size:12px;
+        color:#000;
+        margin-left:11px;
+    }
+    .arts1_p>span{
+        font:14px Tahoma,'Microsoft Yahei','微软雅黑','宋体','黑体',Arial,Helvetica,STHeiti;
+        color:#b2b2b2;
+    }
+     

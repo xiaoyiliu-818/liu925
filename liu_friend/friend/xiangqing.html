@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>摩登天空-详情页</title>
+    <link rel="stylesheet" href="css/xiangqing.css">
+</head>
+<body>
+<header>
+    <iframe class="header" scrolling="no" src="header.html" frameborder="0" style="min-width: 1196px"></iframe>
+</header> 
+<!--详情页-->
+<div class="xq">
+    <div class="xq1">
+        <div class="xq1_left">
+            <img class="xq1_left1" src="img/xq1.jpg" alt="">
+        </div>
+        <div class="xq1_center">
+            <h1 class="xq2_h">
+                <span class="xq2_s">群聊</span>
+                11月02日 —11月03日 太湖湾音乐节
+            </h1>
+            <ul class="xq2_u">
+                <li>演出时间：11月02日 14:00-11月03日 20:30</li>
+                <li>艺人：
+                    <a href="">新裤子</a> /
+                    <a href="">痛仰</a> /
+                    <a href="">旅行团</a> /
+                    <a href="">Click#15</a> /
+                    <a href="">九连真人</a> /
+                    <a href="">丛林之竹</a> /
+                    <a href="">白侍卫</a> /
+                    <a href="">南方酸性咪咪</a> /
+                    <a href="">二手玫瑰乐队</a> /
+                    <a href="">刺猬Hedgehog</a> /
+                    <a href="">黑撒（Balck Head)乐队</a> /
+                    <a href="">五味子Five flavours band</a> /
+                    <a href="">lighting乐队</a>
+                </li>
+                <li>场地：
+                    <a href="">常州 环球动漫嬉戏谷</a>
+                </li>
+                <li>地址：江苏省常州市武进区太北路1号环球动漫嬉戏谷
+					<a href="">查看地图</a>													
+                </li>
+                <li>电话：400-188-6980
+                </li>
+            </ul>
+            <div class="xq2_d1">
+                <span>
+                    <i class="xq2_i1"></i> 摇滚
+                </span>
+                <span>
+                    <i class="xq2_i2"></i> 独立
+                </span>
+            </div>
+            <div class="xq2_d2">
+                <a href="">
+                    <img src="img/a1.jpg" alt="">
+                </a>
+                <a href="">
+                    <img src="img/a2.jpg" alt="">
+                </a>
+                <a href="">
+                    <img src="img/a3.jpg" alt="">
+                </a>
+                <a href="">
+                    <img src="img/a4.jpg" alt="">
+                </a>
+                <div class="xq2_ds">
+                    <i class="xq2_dsi"></i>
+                    想去 
+                    <span class="xq2_ds2">2114</span>
+                </div>
+            </div>
+            <div class="xq2_d3">
+                分享
+				<div class="xq2_d4">
+                    <a class="xq2_a1" href=""></a>
+                    <a class="xq2_a2" href=""></a>
+                    <a class="xq2_a3" href=""></a>
+                    <a class="xq2_a4" href=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="xq1_right">
+            <h2 class="xq1_h2">
+                <span class="xq1_hs">￥</span> 
+                票品价格
+            </h2>
+            <ul class="xq1_ul">
+                <li class="xq1_li1">
+                    <span>￥80</span>
+                    预售票
+                </li>
+                <li class="xq1_li2">
+                    <span>￥120</span>
+                    全价票
+                </li>
+            </ul>
+            <p class="xq1_lp" >						
+				票品信息 :
+                <span>
+                    原价￥120 ！ 该票在
+                    <span class="xq1_ls">2019-11-06 10:30 停止售票</span>
+                </span>
+            </p>
+            <div class="xq1_kong"></div>
+            <!-- <div class="xq1_bt"> -->
+            <button class="xq1_btn">立即购票</button>
+            <!-- </div> -->
+            <p class="xq1_p">
+                通过购买门票方式支持此演出，
+                <span class="xq1_span">一旦票品售出概不退换</span>
+                （因不可抗力因素导致演出取消或延期除外），请您在购买时务必仔细核对您的订单信息并审慎下单。 已购买的门票可在 我的订单中查看购票信息。
+            </p>
+        </div>
+    </div>
+</div> 
+<footer>
+    <iframe class="footer" scrolling="no" src="footer.html" frameborder="0" style="min-width: 1196px"></iframe>
+</footer>  
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+//点击想去按钮，数字加1
+//DOM 4步
+//1.查找触发事件的元素
+var s1=document.getElementsByClassName("xq2_ds")[0];
+//2.绑定处理事件的函数
+s1.onclick=function(){
+    //3.查找要修改的元素
+    //4.修改元素
+    var s2=this.lastElementChild;
+    var txt=s2.textContent;
+    txt++;
+    s2.textContent=txt;
+}
+
+// DOM 4步
+// 1.查找触发事件的元素
+var li1=document.getElementsByClassName("xq1_li1")[0];
+var li2=document.getElementsByClassName("xq1_li2")[0];
+var btn=document.getElementsByClassName("xq1_btn")[0];
+//2.绑定处理事件的函数
+li1.onclick=function(){
+//3.查找要修改的元素
+    btn.className="xq1_btn1";
+    li1.className="xq1_li11";
+    li2.className="xq1_li2";
+//4.修改元素
+}
+li2.onclick=function(){
+    btn.className="xq1_btn1";
+    li2.className="xq1_li21";
+    li1.className="xq1_li1";
+}
+
+</script>
+</html>

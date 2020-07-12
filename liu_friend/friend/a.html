@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .right2_2{
+    width:600px;
+    height:30px;
+    margin:15px auto;
+    font-size: 12px;
+    color:#aaa;
+}
+.right2_2a{
+    width: 80px;
+    height:30px;
+    float: left;
+    line-height: 30px;
+    
+}
+.right2_2b{
+    width: 240px;
+    float: left;
+    line-height: 30px;
+}
+.right2_ipt{
+    width:270px;
+    height:30px;
+    line-height: 30px;
+    padding:0 5px;
+    background:#f0f0f0;
+    border:0;
+    border-radius:2px;
+    box-shadow:-1px -1px 2px -2px;
+}
+.right2_2c{
+    height:30px;
+    line-height: 30px;
+    float:right;
+}
+.right2_ipt2{
+    width:120px;
+    height:30px;
+    line-height: 30px;
+    padding:0 5px;
+    background:#f0f0f0;
+    border:0;
+    border-radius:2px;
+    box-shadow:-1px -1px 2px -2px;
+}
+</style>
+<body>
+<div class="right2">
+  <div class="right2_1">
+    <div class="right2_11">
+      会员登录
+      <a class="right2_a" href=""> / 新用户注册 </a>
+  </div>
+  <div class="right2_2">
+    <div class="right2_2a">手机/信箱：</div>
+    <div class="right2_2b">
+      <input class="right2_ipt" type="text" name="phone">
+    </div>
+    <div class="right2_2c" id="phone">请输入有效手机号或信箱</div>
+  </div>
+  <div class="right2_2">
+    <div class="right2_2a">密码：</div>
+    <div class="right2_2b">
+      <input class="right2_ipt" type="password" name="password">
+    </div>
+    <div class="right2_2c" id="password">密码由8-20位数字或英文组成</div>
+  </div>
+  <div class="right2_2">
+    <div class="right2_2a"></div>
+    <div class="right2_2b">
+      <a class="right2_2ab" href="">忘记密码？</a>
+    </div>
+  </div>
+  <div class="right_end">
+    <div class="right_clear"></div>
+    <input class="right_end2" type="submit" value="登录">
+  </div>
+</div>
+  <div class="right3">
+    您可以用合作伙伴账号登录：
+    <img src="img/sinablog.png" alt="">
+    <a class="right3_a" href="">新浪</a>
+  </div>   
+</div>  
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+//DOM 4步：
+//1.查找触发事件的元素
+//查找type=text的姓名文本框
+$(":text")
+//2.绑定事件处理的函数
+//当文本框失去焦点时
+.blur(function(){
+	vali($(this),3,9,"用户名必须介于3~9位之间!");
+});
+function vali($txt,minlen,maxlen,errMsg){
+//3.查找要修改的元素
+//查找当前文本框旁边的span
+var $span=$txt.next()
+//4.修改元素
+//如果验证通过
+//提示：str.trim()是去掉前后空格的意思
+var len=$txt.val().trim().length;
+if(len>=minlen&&len<=maxlen){
+	$span.html(`<img src='img/ok.png'>`);
+	return true;
+}else{
+	//否则
+	$span.html(`<img src='img/err.png'>${errMsg}`);
+	return false;
+}
+}
+//当type=password的密码框失去焦点时
+$(":password").blur(function(){
+	vali($(this),6,8,"密码必须介于6~8位之间！")
+});
+
+//DOM4步
+//1.查找触发事件的元素
+//查找type=button的按钮
+$(":button")
+//2.绑定事件处理的函数
+//当单击按钮时
+.click(function(){
+	//先验证姓名文本框，如果未通过
+	var $txtName=$(":text");
+	var $txtPwd=$(":password");
+	if(vali($txtName,3,9,"用户名必须介于3~9之间！")==false){
+		//让姓名文本框获得焦点
+		$txtName.focus();
+		//其实jq中事件处理函数也是一个函数两用：给了function，就绑定事件，如果没给function就主动触发该行为
+	}else if(vali($txtPwd,6,8,"密码必须介于6~8位之间！")===false){
+		//否则如果验证密码框，如果未通过
+		//让密码框获得焦点
+		$txtPwd.focus();
+	}else{
+		//否则如果都验证通过
+		alert("注册成功！");//提示注册成功
+	}
+})
+//3.查找需要修改的元素
+//4.修改元素
+
+</script>  
+</body>
+</html>

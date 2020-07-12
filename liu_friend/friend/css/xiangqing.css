@@ -1,0 +1,252 @@
+*{margin:0;padding:0}
+.header{
+    width:100%;
+    height:50px;
+}
+.footer{
+    width:100%;
+    height:468px;
+}
+.xq{
+    width:1200px;
+    height:460px;
+    margin:0 auto;
+    padding:30px 0;
+    display:flex;
+    color: #999;
+}
+.xq1{
+    width:1200px;
+    height:400px;
+    margin:0 auto;
+    position: absolute;
+    justify-content: space-between;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.xq1_left,.xq1_center,.xq1_right{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;    
+}
+.xq1_center{
+    width:510px;
+    height:400px;
+    display:block;
+}
+.xq2_u>li{
+    margin-top:8px;
+    display: list-item;
+}
+.xq2_h{
+    font-weight: 400;
+    line-height: normal;
+    font-size: 20px;
+    color: #333;
+}
+.xq2_s{
+    font-size: 16px;
+    line-height: 18px;
+    background:#000;
+    color: #fff;
+    border-radius: 2px;
+    padding: 0 3px;
+}
+.xq2_u{
+    width:510px;
+    height:179px;
+    margin: 25px 0;
+    font-size: 14px;
+    list-style: none;
+}
+.xq2_d1{
+    margin-right:10px;
+    display: inline-block;
+}
+.xq2_u>li>a{
+    color:#37a;
+    text-decoration: none;
+}
+.xq2_u>li>a:hover{
+    color:red;
+}
+.xq2_d1>span{
+    margin-right:10px;
+    font-size: 14px;
+}
+.xq2_i1,.xq2_i2{
+    background: url(../img/icon.png);
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+.xq2_d2{
+    width: 510px;
+    height: 52px;
+    margin:20px 0;
+}
+.xq2_d2>a{
+    float: left;
+    width: 42px;
+    height: 42px;
+    margin: 0 10px 10px 0;
+}
+.xq2_d2>a>img{
+    border-radius:50%;
+}
+.xq2_ds{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    color: #e72f2f;
+    border: 1px #e72f2f solid;
+    padding: 0 15px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.xq2_dsi{
+    vertical-align: middle;
+    width: 18px;
+    height: 16px;
+    background: url(../img/icon.png) -66px 0 no-repeat;
+    margin-right: 5px;
+    display: inline-block;
+}
+.xq2_d3{
+    font-size: 14px;
+}
+.xq2_d4{
+    width: 150px;
+    height: 30px;
+    margin-left:5px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.xq2_d4>a{
+    float:left;
+    padding-left: 24px;
+    height: 24px;
+    margin: 0 7px 6px 0;
+    display: inline-block;
+    border-radius:50%;
+}
+.xq2_a1{
+    background: url(../img/icon.png) -2px -935px no-repeat;
+}
+.xq2_a2{
+    background: url(../img/icon.png) -38px -935px no-repeat;
+}
+.xq2_a3{
+    background: url(../img/icon.png) -110px -935px no-repeat;
+}
+.xq2_a4{
+    background: url(../img/icon.png) -75px -935px no-repeat;
+}
+.xq1_right{
+    width: 350px;
+    height: 284px;
+    display:block;
+}
+.xq1_h2{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+}
+.xq1_hs{
+    color: #fff;
+    background: #e72f2f;
+    border-radius: 3px;
+    padding: 1px 2px;
+    font-size: 13px;
+    margin-right: 5px;
+}
+.xq1_ul{
+    width: 350px;
+    height: 40px;
+    margin-top:30px;
+}
+.xq1_li1,.xq1_li2{
+    border:1px solid #000;
+    border-radius:4px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 12px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.xq1_lp{
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+}
+.xq1_ls{
+    color:red;
+}
+.xq1_kong{
+    width:350px;
+    height:0px;
+    margin-top:20px;
+}
+/* .xq1_bt{
+    width:350px;
+    height:40px;
+    margin-top:25px;
+    display:block;
+} */
+.xq1_btn{
+    width:350px;
+    height:40px;
+    background:#eee;
+    color:#000;
+    border:0px;
+    border-radius:4px;
+    font-size:16px;
+    margin-top:25px;
+    display:block;
+}
+.xq1_p{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.xq1_span{
+    color: red;
+    font-weight: bolder;
+}
+.xq1_btn1{
+    width:350px;
+    height:40px;
+    background:red;
+    color:white;
+    border:0px;
+    border-radius:4px;
+    font-size:16px;
+    margin-top:25px;
+    display:block;
+}
+.xq1_li11,.xq1_li21{
+    border:1px solid #000;
+    border-radius:4px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 12px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color:red;
+}

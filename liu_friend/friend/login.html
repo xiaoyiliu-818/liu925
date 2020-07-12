@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>摩登天空-登录</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<header>
+    <iframe class="header" scrolling="no" src="header.html" frameborder="0" style="min-width: 1196px"></iframe>
+</header> 
+<!-- 登录-->
+<div class="register">
+<!-- 左侧-->    
+    <div class="left">
+        <div class="left_1">
+            <img src="img/title_membercenter.png" alt="">
+        </div>
+        <ul class="left_2">
+            <li class="left_2li">
+                <p class="left_2p">
+                    <img src="img/title_profilegray.png" alt="">
+                </p>
+            </li>
+            <li class="left_2li">
+                <p class="left_2p">
+                    <img src="img/title_passwordgray.png" alt="">
+                </p>
+            </li>
+            <li class="left_2li">
+                <p class="left_2p">
+                    <img src="img/title_deliveryaddressgray.png" alt="">
+                </p>
+            </li>
+            <li class="left_2li">
+                <p class="left_2p">
+                    <img src="img/title_identitiesgray.png" alt="">
+                </p>
+            </li>
+        </ul>
+    </div>
+<!-- 右侧--> 
+    <div class="right">
+        <div class="right_all">
+            <div class="right1">
+                <img src="img/title_login.png" alt="">
+            </div>
+            <div class="right2">
+                <div class="right2_1">
+                    <div class="right2_11">
+                        会员登录
+                        <a class="right2_a" href=""> / 新用户注册 </a>
+                    </div>
+                    <div class="right2_2">
+                        <div class="right2_2a">手机/信箱：</div>
+                        <div class="right2_2b">
+                            <input class="right2_ipt" type="text" name="phone">
+                        </div>
+                        <div class="right2_2c">请输入有效手机号或信箱</div>
+                    </div>
+                    <div class="right2_2">
+                        <div class="right2_2a">密码：</div>
+                        <div class="right2_2b">
+                            <input class="right2_ipt" type="password" name="password">
+                        </div>
+                        <div class="right2_2c">密码由8-20位数字或英文组成</div>
+                    </div>
+                    <div class="right2_2">
+                        <div class="right2_2a"></div>
+                        <div class="right2_2b">
+                            <a class="right2_2ab" href="">忘记密码？</a>
+                        </div>
+                    </div>
+                    <div class="right_end">
+                        <div class="right_clear"></div>
+                        <input class="right_end2" type="submit" value="登录" onclick="login()">
+                    </div>
+                </div>
+                <div class="right3">
+                    您可以用合作伙伴账号登录：
+                    <img src="img/sinablog.png" alt="">
+                    <a class="right3_a" href="">新浪</a>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>  
+<footer>
+    <iframe class="footer" scrolling="no" src="footer.html" frameborder="0" style="min-width: 1196px"></iframe>
+</footer>  
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+var isVali = true;
+//DOM 4步
+//1.查找触发事件的元素
+var txtPhone=document.getElementsByName("phone")[0];
+var txtPwd=document.getElementsByName("password")[0];
+//2.绑定处理事件的函数
+txtPhone.onfocus=txtPwd.onfocus=function(){  
+    var div=this.parentNode.nextElementSibling;
+    console.log(div)
+    //3.查找要修改的元素
+    //4.修改元素
+    div.className="";
+}
+txtPhone.onblur=function(){
+    var reg=/^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
+    vali(this,reg);
+}
+function vali(txt,reg){
+    var div=txt.parentNode.nextElementSibling;
+    if(reg.test(txt.value)){
+        div.className="vali_success";
+        isVali = true;
+    }else{
+        div.className="vali_fail";
+        isVali = false;
+    }
+}
+txtPwd.onblur=function(){
+	var reg=/^\d{8}$/;
+	vali(this,reg);
+}
+
+function login(){
+    if(isVali == true){
+        $.ajax({
+            url:"http://127.0.0.1:8080/user/login",
+            type:"post",
+            data:{
+                "phone":$("input[name='phone']").val(),
+                "upwd":$("input[name='password']").val()
+            },
+        success:function(result){
+            if(result.code == 200){
+                alert("登录成功！");
+            } else if(result.code == 301){
+                alert("手机号或密码错误！");
+            } else {
+                alert(result.msg);
+            }
+        },
+        error:function(result){
+            alert("内部异常！");
+        }});
+    } else {
+        alert("手机号及密码格式错误，请检查！");
+    }
+    
+}
+
+</script>
+</html>

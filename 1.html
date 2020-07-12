@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<style>
+	*{margin:0;padding:0}
+	#box{
+		width:256px;
+		height:256px;
+		border:1px solid #000;
+		margin:0 auto;
+		position:relative;
+		overflow:hidden;
+	}
+	#box .mask{
+		position:absolute;
+		width:256px;
+		height:256px;
+		top:256px;
+		left:0px;
+		background:rgba(256,20,200,.3);
+		transition:all .5s linear;
+	}
+	#box:hover .mask{
+		top:190px;
+		border-radius:3px;
+	}
+	#box .mask .title,#box .mask .price{
+		width:100%;
+		text-align:center;
+		font-weight:600px;
+	}
+	#box .mask .btn>a{
+		display:inline-block;
+		width:40%;
+		height:20px;
+		border:1px solid #000;
+		text-align:center;
+		line-height:20px;
+		background:linear-gradient(to top,red 0,#000 100%);
+		border-radius:5px;
+		cursor:pointer;
+	}
+	#box .mask .btn{
+		display:flex;
+		justify-content:space-around;
+		align-items:center;
+	}
+</style>
+ </head>
+ <body>
+	<div id="box">
+		<img src="01.png" alt="">
+		<div class="mask">
+			<p class="title">小米手机1250</p>
+			<p class="price">￥1999.00</p>
+			<p class="btn">
+				<a>查看详情</a>
+				<a>加入购物车</a>
+			</p>
+		</div>
+	</div>
+ </body>
+</html>
